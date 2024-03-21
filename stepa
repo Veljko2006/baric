@@ -1,0 +1,19 @@
+#include <stdio.h>
+main ()
+{
+  // niz za smestanje elemenata matrice
+  int row[3],i,j, sum=0;
+  // poruka korisniku
+  printf ("Unesite elemente matrice 3×3:
+");
+  // ucitavanje matrice preko for petlji
+  for (j=0; j<3; j++)
+  {
+    for (i=0; i<3 ;i++)
+    {
+      printf ("A[%d,%d] = ", j+1, i+1);
+      scanf ("%d", &row[i]);
+      // racunanje zbira ako je elemenat glavne dijagonale
+      if (i==j)
+        sum += row [i];
+    }
